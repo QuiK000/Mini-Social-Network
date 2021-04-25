@@ -1,8 +1,6 @@
 const User = require('../Models/Users')
 const bcrypt = require('bcrypt')
 
-// TODO: Сделать валидацию
-
 class Controller {
   async createAccount(req, res) {
     try {
@@ -22,7 +20,7 @@ class Controller {
 
       if (currentEmail) {
         return res.json({
-          message: `Аккаунт зарегистрирован на ${email}`,
+          message: `Аккаунт зарегистрирован на данный Email!`,
           status: 400
         })
       }

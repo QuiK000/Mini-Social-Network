@@ -1,28 +1,55 @@
 <template>
   <div id="app">
+    <Header />
     <router-view />
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+  import Header from '@/components/Header'
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+  export default {
+    name: 'App',
+    components: {
+      Header
     }
   }
-}
+
+</script>
+
+<style lang="scss">
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+  $roboto: 'Roboto', sans-serif;
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  body, html {
+    background: #f3f3f3;
+    font-family: $roboto;
+  }
+
+  .container {
+    max-width: 90%;
+    margin: 0 auto;
+
+    &-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
 </style>

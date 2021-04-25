@@ -1,7 +1,9 @@
 const Router = require('express')
 const router = new Router()
-
 const controller = require('./Controllers/Controller')
+const { check } = require('express-validator')
+
+// TODO: Сделать валидацию
 
 router.post('/login', controller.loginAccount)
 router.post('/registration', controller.createAccount)
