@@ -21,13 +21,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Vue Single File Component" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/client" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1rd33mmyqixY5uw3n0j8ZxUTKQx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -51,7 +51,7 @@
       <option name="presentableId" value="Default" />
       <updated>1619291947128</updated>
       <workItem from="1619291964565" duration="5877000" />
-      <workItem from="1619326924105" duration="1196000" />
+      <workItem from="1619326924105" duration="4425000" />
     </task>
     <servers />
   </component>

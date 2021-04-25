@@ -13,7 +13,7 @@ app.use('/api', router)
 
 mongoose.set('useCreateIndex', true)
 
-mongoose.connect('mongodb+srv://quikkkk:12as34zxc@cluster0.dxxnz.mongodb.net/data?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://quikkkk:12as34zxc@cluster0.gp2jz.mongodb.net/data?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(response => console.log('connected')).catch(e => console.log(e))

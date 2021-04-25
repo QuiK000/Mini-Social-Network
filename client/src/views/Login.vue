@@ -1,11 +1,10 @@
 <template>
-  <div id="app">
-    <div class="registration">
+  <div id="login">
+    <div class="login">
       <div>
-        <input type="text" placeholder="email" v-model="email">
         <input type="text" placeholder="username" v-model="username">
         <input type="text" placeholder="password" v-model="password">
-        <button v-on:click="createAccount">Submit</button>
+        <button v-on:click="loginAccount">Submit</button>
       </div>
     </div>
   </div>
@@ -15,23 +14,27 @@
   import axios from 'axios'
 
   export default {
-    name: "Registration",
+    name: "Login",
     data() {
       return {
-        email: '',
         username: '',
         password: ''
       }
     },
     methods: {
-      createAccount() {
+      loginAccount() {
         const payload = {
-          email: this.email,
           username: this.username,
           password: this.password
         }
 
-        axios.post('/api/registration', payload).then(response => console.log(response.data))
+        axios.post('/api/login', payload).then(response => {
+          if (response.data.status === 200) {
+            this.$router.push('/')
+          } else {
+            // TODO: Написать кастомную ошибку!
+          }
+        })
       }
     }
   }
