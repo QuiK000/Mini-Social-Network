@@ -1,18 +1,13 @@
 <template>
   <div id="app">
-    <Header />
     <router-view />
   </div>
 </template>
 
 <script>
-  import Header from '@/components/Header'
 
   export default {
     name: 'App',
-    components: {
-      Header
-    }
   }
 
 </script>
@@ -37,7 +32,6 @@
   }
 
   body, html {
-    background: #f3f3f3;
     font-family: $roboto;
   }
 

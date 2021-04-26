@@ -14,7 +14,7 @@ const Users = new Schema({
   password: {
     type: String,
     required: true
-  }
+  },
 })
 
 module.exports = model('Users', Users)
