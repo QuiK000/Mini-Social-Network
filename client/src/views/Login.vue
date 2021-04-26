@@ -8,6 +8,10 @@
         <h2 class="form-title">Вход в учетную запись</h2>
       </div>
       <div class="input-group">
+        <label>E-mail</label>
+        <input type="email" class="input" v-model="email">
+      </div>
+      <div class="input-group">
         <label>Username</label>
         <input type="text" class="input" v-model="username">
       </div>
@@ -36,6 +40,7 @@
     name: "Login",
     data() {
       return {
+        email: '',
         username: '',
         password: ''
       }
@@ -43,6 +48,7 @@
     methods: {
       loginAccount() {
         const payload = {
+          email: this.email,
           username: this.username,
           password: this.password
         }

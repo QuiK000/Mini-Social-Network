@@ -54,7 +54,7 @@
           if (response.data.status === 200) {
             console.log(response.data)
 
-            this.$router.push('/feed')
+            this.$router.push('/login')
           } else {
             console.log(response.data)
             // TODO: Написать кастомную ошибку
