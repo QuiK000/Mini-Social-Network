@@ -13,8 +13,6 @@ module.exports = function (req, res, next) {
   }
 
   jwt.verify(token, auth, (err, user) => {
-    console.log(err)
-
     if (err) {
       return res.json({
         message: 'Майнкрафт',

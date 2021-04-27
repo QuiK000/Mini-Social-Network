@@ -2,8 +2,9 @@
   <div id="app">
     <div class="feed">
       <h2>FEED</h2>
-      <div>
-        <span>{{ users.username }}</span>
+      <div v-for="user in users" v-bind:key="user.currentUser._id">
+        <span v-if="user.currentUser.message">Error: {{ user.currentUser.message }} Status: {{ user.currentUser.status }}</span>
+        <span v-else>Username: {{ user.currentUser.username }}</span>
       </div>
     </div>
   </div>
@@ -11,7 +12,6 @@
 
 <script>
   import axios from 'axios'
-  import jwt from 'jsonwebtoken'
 
   export default {
     name: "Feed",
@@ -29,13 +29,13 @@
             Authorization: `Bearer ${token}`
           }
         }).then(response => {
-          console.log(response)
+          const currentUser = response.data
 
           if (response.status !== 200 && response.statusText !== 'OK') {
             console.log('Проблема с сервером') // TODO: Написать кастомную ошибку!
           }
 
-          this.users = response.data
+          this.users.push({ currentUser })
         }).catch(e => console.log(e))
       }
     },

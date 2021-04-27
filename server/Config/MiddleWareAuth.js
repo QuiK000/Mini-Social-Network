@@ -1,3 +1,3 @@
 module.exports = {
-  auth: 'KEY_AUTH_RANDOM'
+  auth: 'NEW_KEY'
 }
